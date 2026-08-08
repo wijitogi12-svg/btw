@@ -108,7 +108,9 @@
         t.classList.toggle('text-foreground', !active);
       });
       document.querySelectorAll('[data-tab-panel]').forEach(function (panel) {
-        panel.classList.toggle('hidden', panel.getAttribute('data-tab-panel') !== value);
+        var active = panel.getAttribute('data-tab-panel') === value;
+        panel.classList.toggle('hidden', !active);
+        panel.classList.toggle('flex', active);
       });
     });
   });
