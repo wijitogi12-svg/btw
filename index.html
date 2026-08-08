@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonic Observer — Sonic Network News &amp; Analysis</title>
+  <meta name="description" content="Independent news, analysis and reference material about the Sonic network — an EVM layer-1 blockchain. Sourced from official Sonic Labs documentation.">
+  <link rel="canonical" href="https://sonicobserver.news/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sonic Observer">
+  <meta property="og:title" content="Sonic Observer — Sonic Network News &amp; Analysis">
+  <meta property="og:description" content="Independent news, analysis and reference material about the Sonic network — an EVM layer-1 blockchain. Sourced from official Sonic Labs documentation.">
+  <meta property="og:url" content="https://sonicobserver.news/">
+  <meta name="twitter:card" content="summary">
+  <link href="css/css2.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/site.css" rel="stylesheet">
+</head>
+<body>
+<div id="root">
+<div class="fixed inset-0 -z-10 overflow-hidden bg-background-accent/10 pointer-events-none select-none" aria-hidden="true"><div class="absolute inset-0 bg-repeat mix-blend-overlay opacity-10 bg-noise bg-size-[512px]"></div></div>
+<nav data-section="navbar" class="fixed z-1000 top-5 left-1/2 -translate-x-1/2 w-content-width">
+  <div class="relative">
+    <div class="flex items-center justify-between p-2 xl:p-3 2xl:p-4 rounded backdrop-blur-sm card">
+      <a href="index.html" class="pl-2 text-xl font-medium text-foreground">SONIC OBSERVER</a>
+      <div class="flex items-center gap-2 xl:gap-3 2xl:gap-4">
+        <div class="nav-inline-links">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button type="button" data-nav-toggle aria-label="Open menu" aria-expanded="false" class="relative flex items-center justify-center size-9 rounded cursor-pointer primary-button border-0">
+          <span class="nav-bar-top absolute w-3 h-px bg-primary-cta-text transition-all duration-300 -translate-y-1"></span>
+          <span class="nav-bar-bottom absolute w-3 h-px bg-primary-cta-text transition-all duration-300 translate-y-1"></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-menu" data-nav-menu>
+      <div class="nav-menu-heading">Site</div>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-menu-heading">Policies</div>
+      <a href="editorial-policy.html">Editorial Policy</a>
+      <a href="advertising-disclosure.html">Advertising Disclosure</a>
+      <a href="risk-disclaimer.html">Risk Disclaimer</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow">
+  <div id="hero" data-section="hero">
+    <section aria-label="Hero section" class="relative flex flex-col items-center justify-center gap-8 md:gap-10 w-full min-h-svh pt-25 pb-20 md:pt-30">
+      <div class="flex flex-col items-center gap-3 w-content-width mx-auto text-center">
+        <div class="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Independent Sonic Ecosystem Coverage</p></div>
+        <h1 class="bg-gradient-to-r from-foreground to-primary-cta bg-clip-text text-transparent pb-[0.1em] -mb-[0.1em] md:max-w-8/10 text-7xl 2xl:text-8xl leading-[1.15] font-semibold text-center text-balance">Sonic, Explained</h1>
+        <p class="md:max-w-7/10 text-lg md:text-xl leading-snug text-balance">News, analysis and reference material about the Sonic network — a high-performance EVM layer-1 blockchain. Written for readers, sourced from official documentation.</p>
+        <div class="flex flex-wrap justify-center gap-3 mt-2 md:mt-3">
+          <div><a href="news.html" class="group relative flex items-center gap-3 min-w-0 w-fit max-w-full py-0.5 pl-5 pr-0.5 text-sm rounded cursor-pointer primary-button text-primary-cta-text"><span class="relative z-10 flex-1 truncate md:transition-colors md:duration-500 md:ease-out text-primary-cta-text md:group-hover:text-secondary-cta-text">Read the News</span><div class="relative z-10 flex items-center justify-center size-8 rounded text-secondary-cta-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right size-4" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div><div class="absolute inset-0.5 z-0 overflow-hidden rounded pointer-events-none"><div class="h-full w-full rounded -translate-x-[calc(-100%+2rem)] md:transition-transform md:duration-500 md:ease-out md:group-hover:translate-x-0 secondary-button"></div></div></a></div>
+          <div><a href="#sonic" class="group relative flex items-center gap-3 min-w-0 w-fit max-w-full py-0.5 pl-5 pr-0.5 text-sm rounded cursor-pointer secondary-button text-secondary-cta-text"><span class="relative z-10 flex-1 truncate md:transition-colors md:duration-500 md:ease-out text-secondary-cta-text md:group-hover:text-primary-cta-text">Explore Topics</span><div class="relative z-10 flex items-center justify-center size-8 rounded text-primary-cta-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right size-4" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div><div class="absolute inset-0.5 z-0 overflow-hidden rounded pointer-events-none"><div class="h-full w-full rounded -translate-x-[calc(-100%+2rem)] md:transition-transform md:duration-500 md:ease-out md:group-hover:translate-x-0 primary-button"></div></div></a></div>
+        </div>
+      </div>
+      <div class="relative flex items-center justify-center w-full overflow-hidden">
+        <div class="w-[70%] md:w-[40%] aspect-square md:aspect-video p-2 xl:p-3 2xl:p-4 card rounded-lg overflow-hidden">
+          <img alt="Abstract network visualisation" class="min-h-0 w-full h-full rounded-lg object-cover" src="assets/img/3d-render-modern-tech-background-with-connecting-lines-dots_1048-14761.jpg">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="sonic" data-section="topics">
+    <section aria-label="Sonic topics" class="py-20">
+      <div class="flex flex-col gap-8 md:gap-10">
+        <div class="flex flex-col items-center gap-2 w-content-width mx-auto">
+      <div class="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Reference</p></div>
+      <h2 class="bg-gradient-to-r from-foreground to-primary-cta bg-clip-text text-transparent pb-[0.1em] -mb-[0.1em] md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance">The Sonic Network at a Glance</h2>
+      <p class="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance">Curated links to the official Sonic Labs documentation, grouped by topic. All links open the primary sources.</p>
+    </div>
+        <div class="grid grid-cols-1 gap-5 mx-auto w-content-width md:grid-cols-3">
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+      <h3 class="text-2xl md:text-3xl font-semibold leading-snug">Sonic</h3>
+      <div class="link-list"><a href="https://docs.soniclabs.com/" target="_blank" rel="noopener" title="What Sonic is: a high-performance EVM layer-1 with sub-second finality.">Overview</a><a href="https://www.soniclabs.com/token" target="_blank" rel="noopener" title="The native token used for transaction fees, staking and validation.">S Token</a><a href="https://docs.soniclabs.com/" target="_blank" rel="noopener" title="Stable-value assets and payments documentation in the official docs.">Sonic USD</a><a href="https://docs.soniclabs.com/sonic/wallets" target="_blank" rel="noopener" title="Supported wallets and network parameters for connecting to Sonic.">Wallets</a><a href="https://docs.soniclabs.com/sonic/sonic-gateway" target="_blank" rel="noopener" title="The native bridge between Ethereum and Sonic with a fail-safe mechanism.">Sonic Gateway</a><a href="https://docs.soniclabs.com/sonic/build-on-sonic" target="_blank" rel="noopener" title="Developer resources, tooling and deployment guides.">Build on Sonic</a><a href="https://docs.soniclabs.com/sonic/node-deployment" target="_blank" rel="noopener" title="How to run validator and archive nodes on the network.">Node Deployment</a><a href="https://docs.soniclabs.com/sonic/faq" target="_blank" rel="noopener" title="Official answers to common questions about the network.">FAQ</a></div>
+    </div>
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+      <h3 class="text-2xl md:text-3xl font-semibold leading-snug">Funding</h3>
+      <div class="link-list"><a href="https://docs.soniclabs.com/funding/sonic-airdrop" target="_blank" rel="noopener" title="The points and gems programme distributing S to users and builders.">Sonic Airdrop</a><a href="https://docs.soniclabs.com/funding/fee-monetization" target="_blank" rel="noopener" title="A model that routes up to 90% of app fees back to developers.">Fee Monetization</a><a href="https://docs.soniclabs.com/funding/innovator-fund" target="_blank" rel="noopener" title="Up to 200M S allocated to support apps building on Sonic.">Innovator Fund</a></div>
+    </div>
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+      <h3 class="text-2xl md:text-3xl font-semibold leading-snug">Technology</h3>
+      <div class="link-list"><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="Architecture summary of the Sonic technology stack.">Overview</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="Full compatibility with the Ethereum Virtual Machine and Solidity tooling.">EVM Compatibility</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="Alignment with upcoming Ethereum protocol upgrades.">Pectra Compatibility</a><a href="https://docs.soniclabs.com/technology/consensus" target="_blank" rel="noopener" title="The DAG-based asynchronous consensus used by validators.">Consensus</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="SonicDB and live pruning that reduce node storage requirements.">Database Storage</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="How staking and validation secure the network.">Proof of Stake</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="Release notes and protocol upgrade history.">Version History</a><a href="https://docs.soniclabs.com/technology" target="_blank" rel="noopener" title="Security audits of the protocol and its components.">Audits</a></div>
+    </div>
+        </div>
+        <div class="w-content-width mx-auto">
+          <div class="disclaimer-box">This material is for informational purposes only and does not constitute investment advice. Sonic Observer is an independent publication and is not affiliated with Sonic Labs. Primary sources: <a href="https://www.soniclabs.com/" target="_blank" rel="noopener" class="underline">soniclabs.com</a>, <a href="https://www.soniclabs.com/token" target="_blank" rel="noopener" class="underline">soniclabs.com/token</a>, <a href="https://docs.soniclabs.com/" target="_blank" rel="noopener" class="underline">docs.soniclabs.com</a>.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="latest" data-section="latest">
+    <section aria-label="Latest analysis" class="py-20">
+      <div class="flex flex-col gap-8 md:gap-10">
+        <div class="flex flex-col items-center gap-2 w-content-width mx-auto">
+      <div class="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Latest</p></div>
+      <h2 class="bg-gradient-to-r from-foreground to-primary-cta bg-clip-text text-transparent pb-[0.1em] -mb-[0.1em] md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance">Recent Analysis</h2>
+      <p class="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance">Neutral, source-based coverage of developments in the Sonic ecosystem.</p>
+    </div>
+        <div class="grid grid-cols-1 gap-5 mx-auto w-content-width md:grid-cols-3">
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+            <span class="text-sm opacity-75">Token · 2026-08-05</span>
+            <h3 class="text-2xl font-semibold leading-snug"><a href="news-s-token.html" class="hover:opacity-80">Understanding the S Token: Fees, Staking and Supply Mechanics</a></h3>
+            <p class="text-base leading-snug opacity-85">What the network's native token actually does, and which supply mechanisms are documented by Sonic Labs.</p>
+            <a href="news-s-token.html" class="text-sm underline text-primary-cta mt-auto">Read the analysis</a>
+          </div>
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+            <span class="text-sm opacity-75">Ecosystem · 2026-08-06</span>
+            <h3 class="text-2xl font-semibold leading-snug"><a href="news-fee-monetization.html" class="hover:opacity-80">Fee Monetization: How Sonic Routes Network Fees to Builders</a></h3>
+            <p class="text-base leading-snug opacity-85">A look at the developer incentive model that shares up to 90% of app-generated fees, and what it means for the ecosystem.</p>
+            <a href="news-fee-monetization.html" class="text-sm underline text-primary-cta mt-auto">Read the analysis</a>
+          </div>
+          <div class="flex flex-col gap-4 p-6 xl:p-7 2xl:p-8 card rounded">
+            <span class="text-sm opacity-75">Technology · 2026-08-07</span>
+            <h3 class="text-2xl font-semibold leading-snug"><a href="news-sonic-gateway.html" class="hover:opacity-80">Sonic Gateway: A Bridge Designed Around a Fail-Safe</a></h3>
+            <p class="text-base leading-snug opacity-85">How the official Ethereum–Sonic bridge works, and why its fail-safe mechanism matters after years of bridge exploits.</p>
+            <a href="news-sonic-gateway.html" class="text-sm underline text-primary-cta mt-auto">Read the analysis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="faq" data-section="faq">
+    <section aria-label="FAQ section" class="py-20">
+      <div class="w-content-width mx-auto flex flex-col gap-8 md:gap-10">
+        <div class="flex flex-col items-center gap-2 w-content-width mx-auto">
+      <div class="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>FAQ</p></div>
+      <h2 class="bg-gradient-to-r from-foreground to-primary-cta bg-clip-text text-transparent pb-[0.1em] -mb-[0.1em] md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance">Common Questions</h2>
+      <p class="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance">Short factual answers, with links to primary sources where relevant.</p>
+    </div>
+        <div class="card rounded p-6 xl:p-10">
+          <div class="flex flex-col md:flex-row gap-3 xl:gap-3.5 2xl:gap-4">
+            <div class="flex flex-1 flex-col gap-3 xl:gap-3.5 2xl:gap-4">
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">What is Sonic?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>Sonic is an EVM-compatible layer-1 blockchain developed by Sonic Labs, designed for high throughput and sub-second transaction finality. Details are published at docs.soniclabs.com.</p></div>
+    </div>
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">What is the S token used for?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>According to the official token page, S is the network's native token used to pay transaction fees, and for staking and validator operation. See soniclabs.com/token for the primary source.</p></div>
+    </div>
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">Is Sonic Observer affiliated with Sonic Labs?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>No. We are an independent editorial project. We summarise and analyse publicly available information and always link to the official sources we used.</p></div>
+    </div>
+            </div>
+            <div class="flex flex-1 flex-col gap-3 xl:gap-3.5 2xl:gap-4">
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">Is anything on this site financial advice?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>No. All content is provided for informational purposes only and does not constitute investment advice. Digital assets are volatile; see our Risk Disclaimer.</p></div>
+    </div>
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">How is your content produced?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>Every article is a unique editorial rewrite based on official documentation and public materials, with sources, publication and update dates listed on each page. See our Editorial Policy.</p></div>
+    </div>
+              <div class="p-3 xl:p-3.5 2xl:p-4 rounded card cursor-pointer select-none" data-faq-item>
+      <div class="flex items-center justify-between gap-3 xl:gap-3.5 2xl:gap-4" data-faq-question>
+        <h3 class="text-lg md:text-xl font-medium leading-snug">How can I contact the editorial team?</h3>
+        <div class="flex shrink-0 items-center justify-center size-8 md:size-9 rounded primary-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-3.5 md:size-4 text-primary-cta-text transition-transform duration-300" data-faq-icon aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+        </div>
+      </div>
+      <div data-faq-answer><p>Use the contact form on the Contact page or email the editorial inbox listed in the footer. We aim to respond to factual corrections quickly.</p></div>
+    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer data-section="footer" aria-label="Site footer" class="relative w-full py-20">
+  <div class="flex flex-col w-content-width mx-auto px-10 pb-5 rounded-lg card">
+    <div class="w-full min-w-0 flex-1 py-5">
+      <h2 class="whitespace-nowrap font-semibold text-4xl md:text-6xl" style="line-height:0.9;">SONIC OBSERVER</h2>
+      <p class="text-sm opacity-75 mt-2">Independent editorial coverage of the Sonic ecosystem. Not affiliated with Sonic Labs.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <span class="footer-links-heading">Site</span>
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-links-heading">Policies</span>
+        <a href="editorial-policy.html">Editorial Policy</a>
+        <a href="advertising-disclosure.html">Advertising Disclosure</a>
+        <a href="risk-disclaimer.html">Risk Disclaimer</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-links-heading">Legal</span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-links-heading">Official Sonic Resources</span>
+        <a href="https://www.soniclabs.com/" target="_blank" rel="noopener">soniclabs.com</a>
+        <a href="https://www.soniclabs.com/token" target="_blank" rel="noopener">S Token page</a>
+        <a href="https://docs.soniclabs.com/" target="_blank" rel="noopener">docs.soniclabs.com</a>
+      </div>
+    </div>
+    <div class="disclaimer-box mb-5">This material is for informational purposes only and does not constitute investment advice. Digital assets are volatile and involve significant risk. Always do your own research. See our <a href="risk-disclaimer.html" class="underline">Risk Disclaimer</a>.</div>
+    <div class="h-px w-full mb-5 bg-foreground/50"></div>
+    <div class="flex flex-col gap-3 items-center justify-between md:flex-row">
+      <span class="text-base opacity-75">© <span data-year>2026</span> Sonic Observer. All rights reserved.</span>
+      <span class="text-sm opacity-60">Editorial contact: <a href="mailto:editorial@sonicobserver.news" class="underline">editorial@sonicobserver.news</a></span>
+    </div>
+  </div>
+</footer>
+<button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg>
+</button>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
