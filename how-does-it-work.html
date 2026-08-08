@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Bitway Earn works: deposit, accrual, redemption | Bitway Brief</title>
+  <meta name="description" content="A step-by-step walkthrough of the documented Bitway Earn flow, from wallet deposit and vault-token minting through accrual, points and redemption.">
+  <link rel="canonical" href="https://bitwaybrief.example/how-does-it-work.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Bitway Brief">
+  <meta property="og:title" content="How Bitway Earn works: deposit, accrual, redemption | Bitway Brief">
+  <meta property="og:description" content="A step-by-step walkthrough of the documented Bitway Earn flow, from wallet deposit and vault-token minting through accrual, points and redemption.">
+  <meta property="og:url" content="https://bitwaybrief.example/how-does-it-work.html">
+  <meta property="og:image" content="https://bitwaybrief.example/assets/img/cosmic-background-with-dark-light-blue-laser-lights-perfect-digital-wallpaper_181624-23690.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Bitway Earn works: deposit, accrual, redemption | Bitway Brief">
+  <meta name="twitter:description" content="A step-by-step walkthrough of the documented Bitway Earn flow, from wallet deposit and vault-token minting through accrual, points and redemption.">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <div id="root">
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-background-accent/10 pointer-events-none select-none" aria-hidden="true">
+      <div class="absolute inset-0 bg-repeat mix-blend-overlay opacity-10 bg-noise bg-size-[512px]"></div>
+    </div>
+    <nav data-section="navbar" class="fixed z-1000 top-5 left-1/2 -translate-x-1/2 w-content-width transition-opacity duration-300">
+      <div class="mx-auto w-full overflow-hidden rounded backdrop-blur-sm card">
+        <div class="relative z-10 flex items-center justify-between gap-3 xl:gap-4 2xl:gap-5 p-3 xl:p-4 2xl:p-5">
+          <a href="index.html" class="text-xl font-medium text-foreground">Bitway Brief</a>
+          <div class="site-nav-desktop site-nav-links"><a href="index.html" class="site-nav-link">Home</a><a href="news.html" class="site-nav-link">Topics</a><a href="about.html" class="site-nav-link">About</a><a href="contact.html" class="site-nav-link">Contact</a></div>
+          <button type="button" data-menu-toggle aria-expanded="false" aria-label="Toggle navigation menu"
+            class="site-menu-toggle relative flex items-center justify-center size-9 rounded cursor-pointer primary-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-1/2 h-1/2 text-primary-cta-text" aria-hidden="true"><path class="icon-bar-top" d="M5 12h14"></path><path class="icon-bar-bottom" d="M12 5v14"></path></svg></button>
+        </div>
+        <div class="site-nav-panel" data-menu-panel aria-hidden="true">
+          <div class="site-nav-panel-inner">
+            <div class="flex flex-col gap-2"><a href="index.html" class="site-nav-link">Home</a><a href="news.html" class="site-nav-link">Topics</a><a href="about.html" class="site-nav-link">About</a><a href="contact.html" class="site-nav-link">Contact</a></div>
+            <p class="site-nav-panel-group-title">Ecosystem coverage</p><div class="flex flex-col gap-2"><a href="bitway-earn.html" class="site-nav-link">Bitway Earn</a><a href="detradfi.html" class="site-nav-link">DeTradFi</a><a href="how-does-it-work.html" class="site-nav-link" aria-current="page">How does it work</a><a href="native-bitcoin-lending.html" class="site-nav-link">Native Bitcoin Lending</a><a href="staking-contracts.html" class="site-nav-link">Staking Contracts</a><a href="bitway-ledger.html" class="site-nav-link">Bitway Ledger</a></div><p class="site-nav-panel-group-title">Assets &amp; programmes</p><div class="flex flex-col gap-2"><a href="btw-token.html" class="site-nav-link">BTW (Bitway Token)</a><a href="btct.html" class="site-nav-link">BTCT</a><a href="points-referral-program.html" class="site-nav-link">Points &amp; Referral Program</a><a href="redemption-policy.html" class="site-nav-link">Redemption Policy</a></div><p class="site-nav-panel-group-title">Reference</p><div class="flex flex-col gap-2"><a href="faq.html" class="site-nav-link">FAQ</a><a href="resources.html" class="site-nav-link">Resources</a><a href="audit-reports.html" class="site-nav-link">Audit Reports</a><a href="official-links.html" class="site-nav-link">Official Links</a><a href="whitepaper.html" class="site-nav-link">Whitepaper</a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="flex-grow">
+<section aria-label="Page header" class="relative pt-35 pb-10 md:pt-45 md:pb-14">
+        <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none select-none mask-[linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]" aria-hidden="true">
+          <div class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 w-9/10 md:w-6/10 aspect-square rounded-full opacity-20 [background:radial-gradient(circle_at_center,var(--color-background-accent)_35%,transparent_70%)]"></div>
+        </div>
+        <div class="w-content-width mx-auto flex flex-col gap-3 items-center md:items-start">
+          <div class="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Mechanics</p></div>
+          <h1 class="bg-gradient-to-r from-foreground to-primary-cta bg-clip-text text-transparent pb-[0.1em] -mb-[0.1em] text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center md:text-left text-balance">How does it work: the deposit-to-redemption flow, step by step</h1>
+          <p class="md:max-w-8/10 text-lg md:text-xl leading-snug text-center md:text-left text-balance">The documented flow has five stages: deposit, minting of a vault token, accrual through an exchange rate, optional points accumulation, and redemption through one of two withdrawal paths.</p>
+          <div class="flex flex-wrap max-md:justify-center gap-3 mt-2 md:mt-3"><a href="news.html" class="flex items-center justify-center h-10 px-6 text-sm rounded cursor-pointer secondary-button text-secondary-cta-text">All topics</a></div>
+        </div>
+      </section>
+      <section aria-label="Article" class="pb-10">
+        <div class="w-content-width mx-auto flex flex-col gap-5">
+          <div class="overflow-hidden rounded">
+            <img alt="How does it work: the deposit-to-redemption flow, step by step" class="w-full h-60 md:h-100 object-cover rounded" src="assets/img/representation-user-experience-interface-design_23-2150169842.jpg">
+          </div>
+          <div class="card rounded p-6 xl:p-8 meta-grid">
+            <div><span class="meta-label">Published</span><span class="meta-value">8 August 2026</span></div>
+            <div><span class="meta-label">Updated</span><span class="meta-value">8 August 2026</span></div>
+            <div><span class="meta-label">Author / Editorial</span><span class="meta-value">Bitway Brief Editorial Desk</span></div>
+            <div><span class="meta-label">Section</span><span class="meta-value">Mechanics</span></div>
+          </div>
+          <div class="card rounded p-6 xl:p-8 article-body" data-reveal>
+<h2>The documented sequence</h2>
+<p>A user connects a wallet and deposits a supported stablecoin into the vault contract. The contract mints vault tokens at the current exchange rate — an initial one-to-one relationship in the simplest case. Those tokens are the user's receipt and the only on-chain record of the claim.</p>
+<p>As strategy results are booked, the exchange rate between vault token and underlying asset is intended to move upward, so the same number of vault tokens becomes redeemable for more of the underlying. Nothing is claimed or compounded manually; the position's value is read from the rate.</p>
+<p>To exit, a user returns vault tokens to the contract. They are burned and a redemption is scheduled through either a queued standard path or an instant path served from an on-chain liquidity reserve, subject to that reserve's balance.</p>
+<h2>Why the design choices matter</h2>
+<p>An exchange-rate model keeps gas costs low and makes the position composable, but it also hides the timing of gains: users see a rate, not a stream of payments. If the rate is updated on a schedule, the value shown between updates is an approximation.</p>
+<p>The two-path redemption design is common in products whose underlying capital is not instantly liquid. The instant path is a convenience buffer; the queued path reflects the actual time needed to unwind positions. When the buffer is drained, the queued path is the real exit, which is why its duration is one of the more important parameters for users to check.</p>
+<h2>What to verify before using</h2>
+<p>Confirm the contract address from the project's own documentation rather than from search results or social posts. Confirm the current fee schedule, minimum amounts and queue duration in the live application. Confirm which network you are transacting on, since a token with the same name can exist on several chains.</p>
+<p>Also confirm what happens in stress scenarios: documentation states that withdrawals can be paused under extreme market conditions. Users should treat that as a design feature to plan around, not an edge case to discover during a drawdown.</p>
+          </div>
+          
+          <div class="card rounded p-6 xl:p-8">
+            <h2 class="text-2xl font-semibold mb-2">Sources</h2>
+            <p class="text-base opacity-70">Primary and secondary material used for this explainer. External pages are outside our editorial control and may change after publication.</p>
+            <ul class="article-body"><li><a href="https://docs.bitway.com/bitway-earn/how-does-it-work" rel="nofollow noopener noreferrer" target="_blank">Bitway documentation — How does it work</a></li><li><a href="https://docs.bitway.com/bitway-earn/redemption-policy" rel="nofollow noopener noreferrer" target="_blank">Bitway documentation — Redemption policy</a></li></ul>
+          </div>
+          <div class="card rounded p-6 xl:p-8">
+            <p class="notice">Disclaimer: this material is for informational purposes only, is not financial, investment, legal or tax advice, and is not a recommendation to buy, sell or hold any digital asset.</p>
+          </div>
+        </div>
+      </section>
+      <div class="w-content-width mx-auto my-10">
+        <div class="ad-slot card">
+          <span class="ad-label">Sponsored</span>
+          <p class="text-base opacity-70">This placement is reserved for clearly labelled paid content. Advertisers have no influence over editorial coverage. See our <a class="underline" href="advertising-disclosure.html">Advertising Disclosure</a>.</p>
+        </div>
+      </div>
+      <section aria-label="Related explainers" class="py-10">
+        <div class="w-content-width mx-auto flex flex-col gap-5">
+          <h2 class="text-4xl font-semibold">More from Bitway Brief</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3"><a href="bitway-earn.html" class="col-span-1 group">
+              <div class="overflow-hidden rounded">
+                <div class="relative h-60 xl:h-70 overflow-hidden">
+                  <img alt="Bitway Earn: how the stablecoin vault product is structured" loading="lazy" class="w-full h-full min-h-0 object-cover rounded group-hover:scale-105 transition-transform duration-500" src="assets/img/analysis-model-flow-chart-icon_53876-167121.jpg">
+                  <div class="absolute inset-x-5 bottom-5 flex flex-col text-background">
+                    <span class="text-2xl font-semibold leading-snug truncate">Products</span>
+                    <span class="text-base leading-snug truncate">Bitway Earn</span>
+                  </div>
+                </div>
+              </div>
+            </a><a href="detradfi.html" class="col-span-1 group">
+              <div class="overflow-hidden rounded">
+                <div class="relative h-60 xl:h-70 overflow-hidden">
+                  <img alt="DeTradFi: reading the label Bitway uses for its hybrid model" loading="lazy" class="w-full h-full min-h-0 object-cover rounded group-hover:scale-105 transition-transform duration-500" src="assets/img/3d-render-modern-background-with-low-poly-plexus-design_1048-13423.jpg">
+                  <div class="absolute inset-x-5 bottom-5 flex flex-col text-background">
+                    <span class="text-2xl font-semibold leading-snug truncate">Concepts</span>
+                    <span class="text-base leading-snug truncate">DeTradFi</span>
+                  </div>
+                </div>
+              </div>
+            </a><a href="redemption-policy.html" class="col-span-1 group">
+              <div class="overflow-hidden rounded">
+                <div class="relative h-60 xl:h-70 overflow-hidden">
+                  <img alt="Redemption policy: queued exits, instant exits and pause powers" loading="lazy" class="w-full h-full min-h-0 object-cover rounded group-hover:scale-105 transition-transform duration-500" src="assets/img/successful-businessman-looking-thruogh-papers-sitting-workplace-with-laptop_176420-3694.jpg">
+                  <div class="absolute inset-x-5 bottom-5 flex flex-col text-background">
+                    <span class="text-2xl font-semibold leading-snug truncate">Policy</span>
+                    <span class="text-base leading-snug truncate">Redemption policy</span>
+                  </div>
+                </div>
+              </div>
+            </a></div>
+        </div>
+      </section>
+    </main>
+    <footer data-section="footer" aria-label="Site footer" class="relative w-full mt-20 overflow-hidden">
+      <div class="w-full aspect-square md:aspect-16/6 mask-fade-top-long">
+        <img alt="Abstract cosmic background" loading="lazy" class="min-h-0 rounded w-full h-full object-cover rounded-none!" src="assets/img/cosmic-background-with-dark-light-blue-laser-lights-perfect-digital-wallpaper_181624-23690.jpg">
+      </div>
+      <div class="w-full py-15 primary-button text-primary-cta-text">
+        <div class="w-content-width mx-auto">
+          <div class="flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-start mb-10">
+            <div class="flex flex-col gap-3 md:max-w-1/3">
+              <h2 class="text-4xl font-semibold">Bitway Brief</h2>
+              <p class="text-base opacity-70">Neutral reporting and explainers on the Bitway ecosystem and wider digital-asset infrastructure.</p>
+              <p class="text-base opacity-70">Editorial desk: <a class="underline" href="mailto:editorial@bitwaybrief.example">editorial@bitwaybrief.example</a></p>
+            </div>
+            <div class="w-full md:w-fit flex flex-wrap gap-y-10 md:gap-12"><div class="w-1/2 md:w-auto flex flex-col items-start gap-3"><h3 class="text-sm opacity-50 truncate">Coverage</h3><a href="news.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">All topics</a><a href="how-does-it-work.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">How does it work</a><a href="btw-token.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">BTW token</a><a href="audit-reports.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Audit reports</a></div><div class="w-1/2 md:w-auto flex flex-col items-start gap-3"><h3 class="text-sm opacity-50 truncate">Editorial</h3><a href="about.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">About</a><a href="editorial-policy.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Editorial Policy</a><a href="advertising-disclosure.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Advertising Disclosure</a><a href="contact.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Contact</a></div><div class="w-1/2 md:w-auto flex flex-col items-start gap-3"><h3 class="text-sm opacity-50 truncate">Legal</h3><a href="risk-disclaimer.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Risk Disclaimer</a><a href="privacy-policy.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Privacy Policy</a><a href="terms.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Terms &amp; Conditions</a><a href="cookie-policy.html" class="text-base text-primary-cta-text hover:opacity-75 transition-opacity">Cookie Policy</a></div></div>
+          </div>
+          <p class="text-sm opacity-60 mb-6">This material is for informational purposes only and does not constitute investment advice. Digital assets are volatile and their value can fall as well as rise.</p>
+          <div class="flex flex-col md:flex-row gap-3 md:gap-0 items-start md:items-center justify-between pt-8 border-t border-primary-cta-text/20">
+            <span class="text-sm opacity-50">&copy; <span data-current-year>2026</span> Bitway Brief. All rights reserved.</span>
+            <div class="flex items-center gap-3">
+              <a href="privacy-policy.html" class="text-sm opacity-50 hover:opacity-75 transition-opacity">Privacy Policy</a>
+              <a href="terms.html" class="text-sm opacity-50 hover:opacity-75 transition-opacity">Terms &amp; Conditions</a>
+              <a href="cookie-policy.html" class="text-sm opacity-50 hover:opacity-75 transition-opacity">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

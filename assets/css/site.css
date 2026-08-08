@@ -1,0 +1,281 @@
+/* Bitway Brief — site-specific components built on top of the base theme. */
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav-link {
+  font-size: var(--text-base);
+  color: var(--foreground);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.site-nav-link:hover,
+.site-nav-link[aria-current="page"] {
+  opacity: 1;
+}
+
+.site-nav-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-nav-desktop {
+    display: flex;
+  }
+}
+
+.site-nav-panel {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.site-nav-panel.is-open {
+  max-height: 32rem;
+  opacity: 1;
+}
+
+.site-nav-panel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1rem 1rem;
+}
+
+.site-nav-panel-group-title {
+  font-size: var(--text-sm);
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+.site-menu-toggle .icon-bar-top,
+.site-menu-toggle .icon-bar-bottom {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.site-menu-toggle[aria-expanded="true"] .icon-bar-top {
+  transform: rotate(45deg);
+}
+
+.site-menu-toggle[aria-expanded="true"] .icon-bar-bottom {
+  transform: rotate(-45deg) scaleX(1);
+}
+
+/* Article typography */
+.article-body p,
+.article-body li {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.article-body h2 {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2rem;
+}
+
+.article-body h3 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.article-body p + p {
+  margin-top: 1rem;
+}
+
+.article-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.article-body ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.article-body ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--primary-cta);
+}
+
+.article-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .meta-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.meta-label {
+  font-size: var(--text-sm);
+  opacity: 0.5;
+  display: block;
+}
+
+.meta-value {
+  font-size: var(--text-base);
+}
+
+.notice {
+  border-left: 3px solid var(--primary-cta);
+  padding: 0.75rem 1rem;
+  font-size: var(--text-base);
+  opacity: 0.85;
+}
+
+.ad-slot {
+  border: 1px dashed color-mix(in srgb, var(--foreground) 25%, transparent);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.ad-label {
+  display: inline-block;
+  font-size: var(--text-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.35rem;
+}
+
+/* FAQ accordion */
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.25s ease;
+}
+
+.faq-item.is-open .faq-answer {
+  max-height: 40rem;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Forms */
+.field-label {
+  font-size: var(--text-sm);
+  opacity: 0.6;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.75rem;
+  background: var(--secondary-cta);
+  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  color: var(--foreground);
+  font-size: var(--text-base);
+}
+
+.field-input:focus {
+  outline: 2px solid color-mix(in srgb, var(--primary-cta) 60%, transparent);
+  outline-offset: 1px;
+}
+
+.form-status {
+  font-size: var(--text-base);
+  margin-top: 0.75rem;
+}
+
+.form-status[data-state="error"] {
+  color: var(--color-red-400);
+}
+
+/* News list controls */
+.filter-chip {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  background: var(--secondary-cta);
+  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--primary-cta);
+  color: var(--primary-cta-text);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.6rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background: var(--secondary-cta);
+  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  font-size: var(--text-sm);
+}
+
+.page-btn[aria-current="true"] {
+  background: var(--primary-cta);
+  color: var(--primary-cta-text);
+}
+
+.page-btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
