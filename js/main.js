@@ -132,27 +132,34 @@
       update();
     });
 
-    /* drag / swipe support */
+    /* drag / swipe support — listeners attached only while dragging */
     var startX = null;
     var startOffset = 0;
-    viewport.addEventListener('pointerdown', function (e) {
-      startX = e.clientX;
-      startOffset = offsetFor(index);
-      track.style.transition = 'none';
-    });
-    window.addEventListener('pointermove', function (e) {
+
+    function onPointerMove(e) {
       if (startX === null) return;
       var delta = e.clientX - startX;
       var offset = Math.min(Math.max(startOffset - delta, 0), maxOffset());
       track.style.transform = 'translate3d(' + (-offset) + 'px, 0, 0)';
-    });
-    window.addEventListener('pointerup', function (e) {
+    }
+
+    function onPointerUp(e) {
       if (startX === null) return;
       var delta = e.clientX - startX;
       if (delta < -50) index = Math.min(slides.length - 1, index + 1);
       else if (delta > 50) index = Math.max(0, index - 1);
       startX = null;
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
       update();
+    }
+
+    viewport.addEventListener('pointerdown', function (e) {
+      startX = e.clientX;
+      startOffset = offsetFor(index);
+      track.style.transition = 'none';
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
     });
 
     window.addEventListener('resize', update);
